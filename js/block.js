@@ -10,6 +10,5 @@ $( document ).ready(function() {
     });
     $('*[id^="divAds"]').remove();
     $('body').children().last().remove();
-    // console.log($('body div:last-child'));
-    
+    $('iframe').remove();
 });

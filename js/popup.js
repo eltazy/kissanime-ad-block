@@ -5,16 +5,11 @@
 'use strict';
 
 let blockAds = document.getElementById('blockAds');
-chrome.storage.sync.get('color', function(data) {
-  blockAds.style.backgroundColor = data.color;
-  blockAds.setAttribute('value', data.color);
-});
 
 blockAds.onclick = function(element) {
-  // let color = element.target.value;
   chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-    chrome.tabs.executeScript(null, { file: "js/jquery-3.4.1.js" }, function() {
-      chrome.tabs.executeScript(tabs[0].id, {file: 'block.js'});
+    chrome.tabs.executeScript(null, { file: "js/lib/jquery-3.4.1.js" }, function() {
+      chrome.tabs.executeScript(tabs[0].id, {file: 'js/block.js'});
     });
   });
 };

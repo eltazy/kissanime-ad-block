@@ -1,10 +1,10 @@
 {
     "name": "Kissanime Add-Block",
-    "version": "1.0",
+    "version": "1.0.0",
     "description": "Watch free anime ads free",
     "permissions": ["activeTab", "declarativeContent", "storage"],
     "background": {
-        "scripts": ["background.js", "js/jquery-3.4.1.js"],
+        "scripts": ["js/background.js", "js/lib/jquery-3.4.1.js"],
         "persistent": false
     },
     "page_action": {
